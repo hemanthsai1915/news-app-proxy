@@ -8,7 +8,7 @@ app.use(cors());
 
 app.get("/news", async (req, res) => {
   const query = req.query.q || "latest";
-  const apiKey = "YOUR_NEWSAPI_KEY"; // 🔐 Replace with your key
+  const apiKey = "886a51ca6e744102958383a81efc4e28"; // 🔐 Replace with your key
 
   const apiUrl = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${apiKey}`;
 
@@ -22,6 +22,7 @@ app.get("/news", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Proxy server running on port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Proxy server running on port ${PORT}`);
 });
