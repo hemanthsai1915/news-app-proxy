@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-const apiKey = "886a51ca6e744102958383a81efc4e28"; // do NOT expose this on frontend
+const apiKey = "5906455e6be44d55a7ea4c39bcde1d2a"; // do NOT expose this on frontend
 
 app.get("/news", async (req, res) => {
   const query = req.query.q || "India";
